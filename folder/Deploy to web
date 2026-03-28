@@ -1,38 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perceptron L vs T Classifier</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <main>
+    <h1>Perceptron L vs T Classifier</h1>
+    <p>Train a perceptron on 4×4 binary letter patterns and classify handwritten L / T shapes.</p>
 
-  <button id="predict">Predict</button>
-  <p id="output"></p>
+    <section class="panel">
+      <div id="grid" class="grid"></div>
+      <div class="actions">
+        <button id="btn-random">Load random sample</button>
+        <button id="btn-predict">Predict current grid</button>
+        <button id="btn-clear">Clear grid</button>
+      </div>
+    </section>
 
-  <script>
-    weights = Array(16).fill(0);
-    weights[0] = ?? ;
-    weights[1] = ?? ;
-    ...
-    weights[15] = ??;
-    
-    bias = ?? ;
+    <section class="info">
+      <p id="metrics"></p>
+      <p id="result"></p>
+      <p id="sample-label"></p>
+      <p id="note"></p>
+    </section>
 
-    activation_function(z) {
-        return z >= 0 ? 1 : -1;
-    }
-    
-    predict( inputs ) {
-          let linear_product = np.dot(inputs, weights) + bias    
-          y_pred  = activation_function(    linear_product    );
-          return y_pred
-    }
-
-
-   
-    
-  </script>
-    
+    <section class="details">
+      <h2>Training data</h2>
+      <p>120 labeled patterns generated from annotated L and T prototypes.</p>
+      <p>Each sample is a 4×4 binary image encoded as 16 pixel values.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
-
-
-  
 </html>
